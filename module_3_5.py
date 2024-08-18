@@ -1,10 +1,10 @@
+def get_multiplied_digits(number):
+    str_number = str(number)
+    first = int(str_number[0])
+    if len(str_number) > 1:
+        symbol = first * get_multiplied_digits(int(str_number[1:]))
+        return symbol
+    else:
+        return first
 
-# Online Python - IDE, Editor, Compiler, Interpreter
-
-def sum(a, b):
-    return (a + b)
-
-a = int(input('Enter 1st number: '))
-b = int(input('Enter 2nd number: '))
-
-print(f'Sum of {a} and {b} is {sum(a, b)}')
+print(get_multiplied_digits(40203))
